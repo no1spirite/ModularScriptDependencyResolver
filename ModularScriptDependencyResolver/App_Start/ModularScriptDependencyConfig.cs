@@ -123,10 +123,10 @@ namespace ModularScriptDependencyResolver
 
         private static FileInfo GetFile(string path)
         {
-/*            if (path[0] != '~')
+            if (path[0] != '~')
             {
                 return new FileInfo(path);
-            }*/
+            }
 
             var applicationRoot = HttpContext.Current.Server.MapPath("~");
             return new FileInfo(applicationRoot + path.Remove(0, 1));

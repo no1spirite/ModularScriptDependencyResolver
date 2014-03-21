@@ -177,6 +177,11 @@
     <Content Include="Content\css\global.min.css" />
     <Content Include="Content\css\ie-no-media-queries.css" />
     <Content Include="Content\css\lib\0.2.1-pure-min.css" />
+    <Content Include="Content\css\imports\_colours.less" />
+    <Content Include="Content\css\imports\_variables.less" />
+    <None Include="Content\css\imports\_typography.less" />
+    <None Include="Content\css\imports\_extend-pure.less" />
+    <None Include="Content\css\imports\_mixins.less" />
     <None Include="Content\css\lib\0.2.1-pure-min.less" />
     <None Include="Content\css\lib\_jgcharitysearch.less" />
     <None Include="Content\css\lib\ladda-themeless.min.less" />

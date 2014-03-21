@@ -76,9 +76,10 @@ small {
   margin: 0;
   background-color: @grey-lighter;
   .size(margin-bottom, 4);
-}
+} 
 
-.divide-half:extend(.divide) {
+.divide-half {
+  &:extend(.divide);
   margin: 0;
   .size(margin-bottom, 2);
 }
