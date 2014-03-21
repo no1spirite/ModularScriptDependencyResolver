@@ -97,7 +97,8 @@
       &:hover,
       &:focus,
       &:active {border-bottom: none;}
-      span:extend(.off-screen) {
+      span {
+        &:extend(.off-screen);
       }
     }
   }
@@ -370,8 +371,9 @@
 // Generic character count
 .count-container{
 	position: relative;
-	.char-count:extend(.text-small) {
-		position: absolute;
+	.char-count {
+		&:extend(.text-small);
+        position: absolute;
 		.size(bottom, 1.6);
 		.size(right, 1);
 		color: @knocked-back;
