@@ -1,0 +1,86 @@
+﻿@import "../global.less";
+
+body{ background-color: @grey-background !important;}
+#global-footer-wrapper{display: none;}
+
+
+[ng-click^="performPafLookup"]{position:relative; top: 29px; height: 44px;}
+@media (max-width: 767px) {
+	[ng-click^="performPafLookup"]{position:static;}
+	#complete-profile-container{
+			margin-top: 0;
+			padding: 0;
+			.jg-login-wrapper>.pure-gutter{padding:0;}
+		}
+	body,.jg-login-header,.jg-login-body{
+		background: rgb(233, 233, 233);
+	}
+	#global-footer-wrapper{display: none;}
+	.pure-control-group{
+		 [class^="pure-u-"]{.size(margin-bottom, 2);}
+		 [class^="pure-u-"]:last-of-type{margin-bottom: 0;}
+		}
+	
+}
+
+@media (min-width: 768px) {
+
+	html{
+		height: 100%;
+	}
+	body{
+		position: relative;
+		height: 100%;
+	}
+
+  #page-decoration{
+	background: url('/ui/2013/images/page-backgrounds/login-runners-3-1976x1037.jpg') bottom center;
+	background-size: cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	max-width: 100%;
+	max-height: 100%;
+	height: 100%;
+	z-index: -1;
+  }
+
+	.jg-login-wrapper{
+		width: 508px !important;
+	}
+	
+	
+}
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+	
+	[ng-click^="performPafLookup"]{position:relative; top: 27px; height: 39px;}
+}
+
+
+
+/* View Specific IE Fixes */
+.ie8{
+#page-decoration{
+	background: url('/ui/2013/images/page-backgrounds/login-runners-3-1976x1037.jpg') bottom center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	max-width: 100%;
+	max-height: 100%;
+	height: 100%;
+	z-index: -1;
+  }
+.floating-module-header,.floating-module-body{
+		background: rgb(233, 233, 233);
+	}
+[ng-click^="performPafLookup"]{top: 29px; height: 44px;}
+}
+.ie9,.ie1{[ng-click^="performPafLookup"]{height: 43px;}}
+
+

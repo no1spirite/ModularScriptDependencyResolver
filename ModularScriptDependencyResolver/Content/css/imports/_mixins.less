@@ -79,13 +79,14 @@
 	height: auto !important;
 	height: @height;
 }
-
-.opacity(@trans) {
-  filter: alpha(opactiy=(@trans * 100));
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{@trans * 100})";
+.opacity(@trans: 0.5) {
   -moz-opacity: @trans;
   -khtml-opacity: @trans;
+  -webkit-opacity: @trans;
   opacity: @trans;
+  @opperc: @trans * 100;
+  -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+  filter: ~"alpha(opacity=@{opperc})";
 }
 
 // From left to right

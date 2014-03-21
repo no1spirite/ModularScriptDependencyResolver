@@ -1,14 +1,118 @@
-﻿@import "../lib/0.2.1-pure-min.less";
-@import "../lib/_jgcharitysearch.less";
-@import "../lib/ladda-themeless.min.less"; 
+﻿@import "../global.less";
 
-@import "../imports/_variables.less";
-@import "../imports/_mixins.less";     
+@import "../imports/_cards.less";
 
-@import "../imports/_extend-pure.less"; 
+h4.text-center {
+	text-align: center;
+	font-weight: 400;
+	margin-bottom: 16px;
+} 
+
+#social-head-charity-name {
+  font-weight: 400; 
+  display: inline-block;
+  padding-top: 0.8em;
+}      
  
-@import "../imports/_typography.less";  
-//@import "../imports/_helpers.scss"; 
-//@import "../imports/_buttons.scss";
-//@import "../imports/_forms.scss"; 
-//@import "../imports/_modules.scss";
+// Social Sharing    
+@import "../imports/_social-sharing.less";  
+.social-sharing-container {
+	display: inline-block;
+}
+.sharing-cta {
+	.size(margin-right, 2);
+	display: inline-block;
+}
+.fb-like-wrap { 
+    display: inline-block; 
+    line-height: 0.875rem; 
+    vertical-align: middle;
+	.size(margin-left, 2);
+}
+.sharing-buttons {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#share-on-twitter, 
+#share-on-google-plus, 
+#share-on-linked-in {
+  .size(margin-left, 2);
+}
+
+//donation prompts and slider
+.donation-prompts {
+	background: @grey-medium-light-background;
+	border-bottom: 1px solid @grey-button-disabled;
+	h2 {
+		color: @body-copy;
+		.size(padding-top, 2.5) !important;
+		.size(font-size, 2.3);
+		.size(margin-left, 1) !important;
+		width: 88%;
+		text-align: center !important;
+		font-weight: 400;
+		//font-weight: bold;
+		
+	 }
+}
+
+//accommodate for no js
+.swipe {
+	 visibility: visible;
+}
+
+.js .swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+
+.js .swipe-wrap {
+  overflow: hidden;
+  position: relative;
+  width: 300%;
+  > div {
+    float: left;
+    width: 33.333%;
+    position: relative;
+  }
+}
+
+.slide {
+	transition-timing-function: cubic-bezier(.17,1.84,.83,.74);
+	-webkit-transition-timing-function: cubic-bezier(.17,1.84,.83,.74);
+}
+
+//slider nav
+.js .slider-nav {
+    width: auto;
+    position: relative;
+    width: 100%;
+	.slider-nav-position {
+        clear: left;
+        position: absolute;
+        top: 20px;
+        z-index: 9999;
+        width: 10% !important;
+        a {
+            display: inline-block;
+            width: 100%;
+            height: 40px;
+            border: none !important; 
+        }
+    }
+    .slider-nav-position-left {
+        left: 0;
+        a {
+            background: url('/ui/2013/images/icons/arrow-left.png') no-repeat center right; 
+        }
+    } 
+    .slider-nav-position-right {
+        right:  0;
+        a {
+            background: url('/ui/2013/images/icons/arrow-right.png') no-repeat center left;  
+        }
+    }
+}
+

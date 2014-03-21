@@ -1,3 +1,4 @@
+@import "../imports/_cards.scss";
 /* @reference "//fonts.googleapis.com/css?family=Roboto:500,400,300,100" */
 article,
 aside,
@@ -4835,4 +4836,42 @@ body:after {
   padding-top: 0;
   padding-bottom: 0px;
   opacity: 0;
+}
+#homepage-panel-fullwidth {
+  background-image: url("/ui/2013/images/page-backgrounds/HP-Top-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60% 60%;
+  color: #ffffff;
+}
+#homepage-panel-fullwidth .hp-larger-font {
+  font-size: 1.3em;
+}
+#homepage-panel-fullwidth .hp-white-font {
+  color: #ffffff;
+}
+#homepage-panel-fullwidth .hp-text-shadow {
+  text-shadow: 1px 1px 2px #000000;
+}
+.hp-search-form {
+  display: inline-block;
+  vertical-align: sub;
+  width: 50%;
+  max-width: 480px;
+  min-width: 280px;
+}
+#homepage-search-panel {
+  background-color: #5099ff;
+  text-align: center;
+}
+#homepage-search-panel #hp-sp-text {
+  display: inline-block;
+  vertical-align: middle;
+  color: #ffffff;
+  font-size: 1.03em;
+}
+@media (min-width: 980px) {
+  #homepage-search-panel #hp-sp-text {
+    font-size: 1.13em;
+  }
 }

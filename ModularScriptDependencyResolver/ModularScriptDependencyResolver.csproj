@@ -174,7 +174,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\global.css" />
-    <Content Include="Content\css\global.min.css" />
+    <Content Include="Content\css\global.min.css">
+      <DependentUpon>global.less</DependentUpon>
+    </Content>
     <Content Include="Content\css\ie-no-media-queries.css" />
     <Content Include="Content\css\lib\0.2.1-pure-min.css" />
     <Content Include="Content\css\imports\_colours.less" />
@@ -194,12 +196,13 @@
     <Content Include="Content\css\imports\_cards.less" />
     <Content Include="Content\css\imports\_buttons.less" />
     <Content Include="Content\css\imports\_angular-helpers.less" />
+    <None Include="Content\css\global.less" />
     <None Include="Content\css\imports\_typography.less" />
     <None Include="Content\css\imports\_extend-pure.less" />
     <None Include="Content\css\imports\_mixins.less" />
-    <None Include="Content\css\lib\0.2.1-pure-min.less" />
+    <None Include="Content\css\lib\_0.2.1-pure-min.less" />
     <None Include="Content\css\lib\_jgcharitysearch.less" />
-    <None Include="Content\css\lib\ladda-themeless.min.less" />
+    <None Include="Content\css\lib\_ladda-themeless.min.less" />
     <Content Include="Content\css\lib\jgcharitysearch.css" />
     <Content Include="Content\css\lib\ladda-themeless.min.css" />
     <Content Include="Content\css\styleguide.css" />
@@ -209,6 +212,36 @@
     </Content>
     <Content Include="Content\css\Views\CharityResponsive.min.css">
       <DependentUpon>CharityResponsive.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Views\EditFundraisingPage.css">
+      <DependentUpon>EditFundraisingPage.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Views\EditFundraisingPage.min.css">
+      <DependentUpon>EditFundraisingPage.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Views\EndUserAccount.css">
+      <DependentUpon>EndUserAccount.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Views\EndUserAccount.min.css">
+      <DependentUpon>EndUserAccount.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Views\HomePage.css">
+      <DependentUpon>HomePage.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Views\HomePage.min.css">
+      <DependentUpon>HomePage.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Views\NewRegistration.css">
+      <DependentUpon>NewRegistration.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Views\NewRegistration.min.css">
+      <DependentUpon>NewRegistration.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Views\OneSearch.css">
+      <DependentUpon>OneSearch.less</DependentUpon>
+    </Content>
+    <Content Include="Content\css\Views\OneSearch.min.css">
+      <DependentUpon>OneSearch.less</DependentUpon>
     </Content>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -303,6 +336,12 @@
     <Content Include="Content\css\Views\OneSearch.scss" />
     <Content Include="Content\css\Views\Signin.scss" />
     <None Include="Content\css\Views\CharityResponsive.less" />
+    <None Include="Content\css\Views\Signin.less" />
+    <None Include="Content\css\Views\OneSearch.less" />
+    <None Include="Content\css\Views\NewRegistration.less" />
+    <None Include="Content\css\Views\HomePage.less" />
+    <None Include="Content\css\Views\EndUserAccount.less" />
+    <None Include="Content\css\Views\EditFundraisingPage.less" />
     <None Include="Scripts\vendor\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\vendor\jquery-1.8.2.js" />
     <Content Include="Scripts\vendor\jquery-1.8.2.min.js" />
