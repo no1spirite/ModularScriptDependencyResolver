@@ -1,0 +1,105 @@
+.size(@property: null, @units: 4, @importance: false, @mixin: null) when (@mixin = min-height) {
+  @pixel-size: round(((6*@units)*((1/@font-size-mobile)*@font-size-desktop))) + px;
+  @rem-size: ((1/@font-size-mobile)*(6*@units)) + rem;
+  
+  .min-height(@pixel-size);
+  .min-height(@rem-size);
+}
+
+.size(@property: null, @units: 4, @importance: false, @mixin: null) when (@mixin = max-height) {
+  @pixel-size: round(((6*@units)*((1/@font-size-mobile)*@font-size-desktop))) + px;
+  @rem-size: ((1/@font-size-mobile)*(6*@units)) + rem;
+  
+  .max-height(@pixel-size);
+  .max-height(@rem-size);
+}
+
+.size(@property: null, @units: 4, @importance: false, @mixin: null) when (default()) {
+  @pixel-size: round(((6*@units)*((1/@font-size-mobile)*@font-size-desktop))) + px;
+  @rem-size: ((1/@font-size-mobile)*(6*@units)) + rem;
+  
+  @property: @pixel-size;
+  @property: @rem-size;
+}
+
+.border-radius (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+.box-shadow(@shadow1, @shadow2:false, @shadow3:false, @shadow4:false, @shadow5:false) when (@shadow2) {
+ @params: @shadow1, @shadow2;
+  -webkit-box-shadow: @params;
+  -moz-box-shadow: @params;
+  box-shadow: @params;
+}
+
+.box-shadow(@shadow1, @shadow2:false, @shadow3:false, @shadow4:false, @shadow5:false) when (@shadow3) {
+ @params: @shadow1, @shadow2, @shadow3;
+  -webkit-box-shadow: @params;
+  -moz-box-shadow: @params;
+  box-shadow: @params;
+}
+
+.box-shadow(@shadow1, @shadow2:false, @shadow3:false, @shadow4:false, @shadow5:false) when (@shadow4) {
+ @params: @shadow1, @shadow2, @shadow3, @shadow4;
+  -webkit-box-shadow: @params;
+  -moz-box-shadow: @params;
+  box-shadow: @params;
+}
+
+.box-shadow(@shadow1, @shadow2:false, @shadow3:false, @shadow4:false, @shadow5:false) when (@shadow5) {
+ @params: @shadow1, @shadow2, @shadow3, @shadow4, @shadow5;
+  -webkit-box-shadow: @params;
+  -moz-box-shadow: @params;
+  box-shadow: @params;
+}
+
+.box-shadow(@shadow1, @shadow2:false, @shadow3:false, @shadow4:false, @shadow5:false) when (default()) {
+ @params: @shadow1;
+  -webkit-box-shadow: @params;
+  -moz-box-shadow: @params;
+  box-shadow: @params;
+}
+
+.sprite(@path: "/ui/2013/images/icons/sprite1.png") {
+  background: transparent url(@path) no-repeat 0 0;
+  background-size: 25rem auto;
+}
+
+.max-height (@height) {
+	max-height: @height;
+	height: auto !important;
+	height: @height;
+}
+
+.min-height (@height) {
+	min-height: @height;
+	height: auto !important;
+	height: @height;
+}
+
+.opacity(@trans) {
+  filter: alpha(opactiy=(@trans * 100));
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{@trans * 100})";
+  -moz-opacity: @trans;
+  -khtml-opacity: @trans;
+  opacity: @trans;
+}
+
+// From left to right
+.gradient-horizontal(@start-color: transparent, @end-color: #000, @start-percent: 0%, @end-percent: 100%) {
+  background-image: -webkit-linear-gradient(left, color-stop(@start-color @start-percent), color-stop(@end-color @end-percent)); // Safari 5.1-6, Chrome 10+
+  background-image:  linear-gradient(to right, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str(@start-color)}', endColorstr='#{ie-hex-str(@end-color)}', GradientType=1); // IE9 and down
+}
+
+// From top to bottom
+.gradient-vertical(@start-color: transparent, @end-color: #000, @start-percent: 0%, @end-percent: 100%) {
+  background-image: -webkit-linear-gradient(top, @start-color @start-percent, @end-color @end-percent);  // Safari 5.1-6, Chrome 10+
+  background-image: linear-gradient(to bottom, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str(@start-color)}', endColorstr='#{ie-hex-str(@end-color)}', GradientType=0); // IE9 and down
+}

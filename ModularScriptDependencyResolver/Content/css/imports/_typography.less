@@ -1,0 +1,137 @@
+html {
+  font-size: @font-size-mobile + px;
+} 
+
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  color: @body-copy;
+  background: @grey-lighter;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, table, pre {
+  margin-top: 0;
+  .size(margin-bottom, 4);
+}
+h3, h4, h5, h6 {
+  color: @body-copy;
+  font-weight: 300;
+}
+h1, h2 {
+  color: @body-copy;
+  font-weight: 300;
+}
+h1.impact-header {
+  font-size: 1.71428em;
+  .size(line-height, 5);
+  .size(margin-bottom, 2);
+}
+h1 {
+  font-size: 1.64285em;
+  .size(line-height, 5);
+  .size(margin-bottom, 2);
+  font-weight: 300;
+
+}
+h2 {
+  font-size: 1.42857em;
+  .size(line-height, 4);
+  .size(margin-bottom, 2);
+}
+h3, .text-large {
+  font-size: 1.21428em;
+  .size(line-height, 4);
+  .size(margin-bottom, 2);
+}
+h4, h5 {
+  font-weight: 300;
+}
+h4, h5, h6 {
+  font-size: 1.07142em;
+  .size(line-height, 3);
+  .size(margin-bottom, 1);
+}
+
+.text-small {
+  font-size: 0.85714em;
+  font-weight: 300;
+  .size(line-height, 2.33);
+}
+
+th, td {
+  padding: 0;
+}
+
+small {
+  vertical-align: bottom;
+}
+
+.k-back {
+  color: @knocked-back;
+}
+
+.divide {
+  border: 0;
+  height: 2px;
+  margin: 0;
+  background-color: @grey-lighter;
+  .size(margin-bottom, 4);
+} 
+
+.divide-half {
+  &:extend(.divide);
+  margin: 0;
+  .size(margin-bottom, 2);
+}
+
+
+strong {
+  font-weight: 500;
+}
+
+a[ng-click],
+a:link, a:visited {  
+  cursor: pointer;
+  padding-bottom: .07em;
+  text-decoration: none;
+  color: @body-copy;
+  font-weight: 400;
+  &.action-link{
+	color: @blumine;
+	}
+  }
+
+a:hover, a:focus, a:active {
+  text-decoration: underline;  
+}
+
+
+
+a.brand-purple {
+	color: @purple-brand;
+}
+
+// if action link is next to button then it gets a margin to add space
+.pure-button+.action-link{
+	.size(margin-left,2);
+	.size(margin-right,2);
+}
+.action-link{
+	color: @blumine;
+	&.pseudo-btn{
+		display: inline-block;
+		.size(line-height, 3);
+		.size(padding-bottom, 1);
+		.size(padding-top, 1);
+	}
+}
+
+.action-link-container a{
+	color: @blumine;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+
