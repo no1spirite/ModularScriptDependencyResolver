@@ -1,0 +1,98 @@
+@import "../imports/_mixins.scss";
+@import "../imports/_variables.scss";
+@import "../imports/_helpers.scss";
+
+
+
+.search-group-container {
+  color: $body-copy;
+}
+
+h2.search-totals{
+ @include size(font-size, 2.5);
+ color: red !important;
+  }
+
+ 
+.search-group-container h3.title {
+	color: #ffffff;
+	@include size(padding-left, 1.5, !important);
+	@include size(padding-top, 1.3, !important);
+	@include size(padding-bottom, 1.3, !important);
+ }
+
+ 
+.header-fundraiser  h3.title {
+  background-color: $search-header-fundraiser-title;
+}
+
+
+.header-charity  h3.title {
+  background-color: $search-header-charity-title;
+}
+
+
+.header-localproject  h3.title, .header-globalproject  h3.title {
+  background-color: $search-header-localproject-title;
+ }
+
+
+.result {
+  background: #fff;
+  border-bottom: 1px solid $search-result-border;
+  padding: 0.5em 0; 
+  &:hover {
+    background-color: $search-result-hover;
+  }
+}
+.result-location {
+  @include size(margin-bottom, 2, !important);
+ 
+}
+
+.result .description-paragraph {
+  max-height: 4em; 
+  overflow: hidden;
+  //background: aqua;
+}
+
+
+//button 
+.jg-button-tertiary-grey-border {
+	 @include size(margin-top, 1.5, !important);
+
+}
+
+
+
+
+
+
+//desktop and ipad
+
+@media (min-width: 768px) {
+  .search-group-container h3.title {
+    background-color: #ffffff;
+    border-bottom: 1px solid $search-result-border;
+    color: $body-copy;
+    @include size(padding-left, 1.8, !important);
+	@include size(padding-bottom, 0.8, !important);
+	@include size(padding-top, 1, !important);
+	margin-bottom: 2px;
+  }
+
+  .header-fundraiser  h3.title {
+    border-top: 2px solid $search-header-fundraiser-title;
+  }
+  .header-charity h3.title {
+    border-top: 2px solid$search-header-charity-title;   
+  }
+  .header-localproject  h3.title, .header-globalproject h3.title {
+    border-top: 2px solid $search-header-localproject-title;    
+  }
+  h4.search-result-name {
+	 @include size(font-size, 2.5, !important);
+  }
+}
+
+

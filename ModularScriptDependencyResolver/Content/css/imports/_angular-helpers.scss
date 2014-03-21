@@ -1,0 +1,20 @@
+/* ass .native-css-slidedown to an element which uses the nh-hide or ng-show directive to make it slide in and out of existence */
+
+.native-css-slidedown{
+    transition:all linear 0.2s;
+
+    &.ng-hide-add,&.ng-hide-remove{
+        display:block!important;
+    }
+	
+	&.ng-hide {
+		line-height:0;
+		padding-top: 0;
+		padding-bottom: 0px;
+		opacity:0;
+	}
+}
+
+[remaining-character-count]{
+	@include size(padding-right, 3, !important);
+	}

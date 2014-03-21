@@ -1,0 +1,90 @@
+@mixin size($property: null, $units: 4, $importance: false, $mixin: null) {
+  // This mixin will calculate the rem values defined by design (6px's in mobile and scaled up for desktop)
+  // Because IE8 and below don't support rem, we insert the px equivalent for the desktop sizes just before.
+  $pixel-size: round(((6*$units)*((1/$font-size-mobile)*$font-size-desktop))) + px;
+  $rem-size: ((1/$font-size-mobile)*(6*$units)) + rem;
+  @if $mixin == min-height {
+    @include min-height($pixel-size);
+    @include min-height($rem-size);
+  }
+  @else if $mixin == max-height {
+    @include max-height($pixel-size);
+    @include max-height($rem-size);
+  }
+  @else {
+    @if $importance {
+    	#{$property}: $pixel-size $importance; // This number is rounded to the nearest whole number to avoid issues with IE7
+    	#{$property}: $rem-size $importance;
+    } @else {
+    	#{$property}: $pixel-size; // This number is rounded to the nearest whole number to avoid issues with IE7
+    	#{$property}: $rem-size;    	
+    }
+  }
+  // EXAMPLE OF HOW TO USE
+  // @include size(line-height, 4, !important); <-- important is optional
+  // EXAMPLE OF HOW TO USE 2
+  // @include size($mixin: min-height, $units: 4);
+}
+
+
+@mixin border-radius ($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+@mixin box-shadow($shadow1, $shadow2:false, $shadow3:false, $shadow4:false, $shadow5:false) {
+ $params: $shadow1;
+  @if $shadow2 
+    { $params: $shadow1, $shadow2; }
+    @if $shadow3 != false
+      { $params: $shadow1, $shadow2, $shadow3; }
+      @if $shadow4 != false
+        { $params: $shadow1, $shadow2, $shadow3, $shadow4; }
+        @if $shadow5 != false
+          { $params: $shadow1, $shadow2, $shadow3, $shadow4, $shadow5; }
+
+  -webkit-box-shadow: $params;
+  -moz-box-shadow: $params;
+  box-shadow: $params;
+}
+
+@mixin sprite($path: "/ui/2013/images/icons/sprite1.png") {
+  background: transparent url($path) no-repeat 0 0;
+  background-size: 25rem auto;
+}
+
+@mixin max-height ($height) {
+	max-height: $height;
+	height: auto !important;
+	height: $height;
+}
+
+@mixin min-height ($height) {
+	min-height: $height;
+	height: auto !important;
+	height: $height;
+}
+
+@mixin opacity($trans) {
+  filter: alpha(opactiy=($trans * 100));
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
+  -moz-opacity: $trans;
+  -khtml-opacity: $trans;
+  opacity: $trans;
+}
+
+// From left to right
+@mixin gradient-horizontal($start-color: transparent, $end-color: #000, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-linear-gradient(left, color-stop($start-color $start-percent), color-stop($end-color $end-percent)); // Safari 5.1-6, Chrome 10+
+  background-image:  linear-gradient(to right, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down
+}
+
+// From top to bottom
+@mixin gradient-vertical($start-color: transparent, $end-color: #000, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Safari 5.1-6, Chrome 10+
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}

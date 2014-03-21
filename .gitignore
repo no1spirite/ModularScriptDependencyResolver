@@ -1,0 +1,283 @@
+# Orchard
+# ignore orchard app_data folder
+Orchard/src/Orchard/App_Data/
+
+# Compiled JS for views
+Website/GG.Web.Website/jg-refresh/scripts/views/*-views.min.js
+Website/GG.Web.Website/jg-refresh/scripts/views/*-views.js
+Website/GG.Web.Website/jg-refresh/scripts/views/**/*-views.min.js
+Website/GG.Web.Website/jg-refresh/scripts/views/**/*-views.js
+
+Website/GG.Web.Website/scripts/jquery.mobile/fundraising.js
+
+*-views.js
+*-views.min.js
+Website/GG.Web.Website/ui/2013/scripts/global.js
+Website/GG.Web.Website/ui/2013/css/[Vv]iews/*.css
+Website/GG.Web.Website/ui/2013/css/global.css
+Website/GG.Web.Website/ui/2013/css/styleguide.css
+
+
+# AMD generated and linked files
+Website/GG.Web.Donation/Scripts/amd.js
+Website/GG.Web.Website/scripts/jquery.mobile/donation/
+Website/GG.Web.Website/Views/AwesomeDonation/
+Website/GG.Web.Donation/Views/Shared/Mobile.jquery.Master
+Website/GG.Web.Donation/Views/Shared/Partials/Analytics.ascx
+Website/GG.Web.Donation/Views/Web.config
+
+Website/GG.Web.Website/scripts/jquery.mobile/fundraising.js
+
+._*
+
+# Linked EmailVision configs
+Website/GG.Api.Services/EmailVision.config
+Website/GG.Web.Website/EmailVision.config
+
+# VS Upgrade logs
+Website/UpgradeLog.*
+Website/_UpgradeLog_Files/*
+
+# Exchange rate cache
+Website/GG.Web.Website.ExchangeRateCache/*.json
+
+# Minified files (except those in JustGivingLocal)
+**.min.js
+**.min.css
+!Website/GG.Web.Website.JustGivingLocal/static/js/vendor/*.min.js
+!Website/GG.Web.Website.JustGivingLocal/static/css/*.min.css
+!Website/GG.Web.Website.JustGivingLocal/Content/themes/base/minified/*.min.css
+
+# Windows shortcuts
+*.lnk
+
+# VS Bits
+[Oo]bj
+[Bb]in
+[Cc]lient[Bb]in
+
+
+#exclude jmeter.log and results.xml
+PerformanceTests/jmeter/bin/jmeter.log
+PerformanceTests/jmeter/bin/output/results.xml
+
+# include jmeter binaries
+!PerformanceTests/jmeter/bin
+
+# but include  Orchard/lib/bin
+!Orchard/lib/**/bin
+
+
+
+*.suo
+Publish.xml
+
+# p4merge
+*.orig
+
+# other merge artifacts
+*.REMOTE.*
+*.BASE.*
+*.BACKUP.*
+*.LOCAL.*
+
+# ncrunch
+*.ncrunch*
+_NCrunch_Main
+
+# database temp dir
+[Ww]ebsite/[Dd]atabase/[Tt]emp
+
+# Some random build artifact...
+Libs/*.dll
+
+# ReSharper
+_ReSharper.*
+*.ReSharper
+*.user
+
+#dotCover
+*.dotCover
+
+# VS Productivity Power Tools
+*.docstates
+
+# Runtime/Misc Junk :)
+*.log*
+!*.Logging.*.dll
+.sass-cache
+*.orig
+Website/GG.Web.Website/content/2011/.livereload
+Website/GG.Web.Website.Logs/*.*
+.DS_Store
+
+# Compiled CSS conventional location; SS (Grab me if this causes problems!!)
+*compiled/*.css
+
+# SASS local tools for IDE 
+*.idea 
+Website/GG.Web.Website/content/tabulous/sass/.idea/*.*
+
+# SASS-Generated Files
+Website/GG.Web.Website/content/tabulous/css/**/*.css
+Website/GG.Web.Website/content/*/css/*/*.css 
+Website/GG.Web.Website/content/*/css
+Website/GG.Web.Website/content/2011/css/**/*.css
+Website/GG.Web.Website/content/2011/css/*.css
+Website/GG.Web.Website/jg-refresh/content/css/**/*.css
+Website/GG.Web.Website/jg-refresh/content/css/*.css
+Website/GG.Web.Website/Responsive/jg-responsive/css/*.css
+Website/GG.Web.Website/ui/2013/css/*.css
+Orchard/src/Orchard.Web/Themes/JustGiving/Styles/**/*.css
+Orchard/src/Orchard.Web/Themes/JustGiving/Styles/global.css
+Orchard/src/Orchard.Web/Themes/JustGiving/Styles/global.min.css
+Orchard/src/Orchard.Web/Themes/JustGiving/Styles/print.css
+Orchard/src/Orchard.Web/Themes/JustGiving/Styles/print.min.css
+Orchard/src/Orchard.Web/Modules/JustGiving.JgRefresh/Styles/global.css
+Orchard/src/Orchard.Web/Modules/JustGiving.JgRefresh/Styles/global.min.css
+Orchard/src/Orchard.Web/Modules/JustGiving.JgRefresh/Styles/print.css
+Orchard/src/Orchard.Web/Modules/JustGiving.JgRefresh/Styles/print.min.css
+
+#Combined and minified
+Website/GG.Web.Website/jg-refresh/scripts/jquery/*.js
+Website/GG.Web.Website/jg-refresh/scripts/views/*.js
+Orchard/src/Orchard.Web/Themes/JustGiving/Scripts/jg-plugins.js
+Orchard/src/Orchard.Web/Themes/JustGiving/Scripts/jg-plugins.min.js
+
+
+# Project Build Output
+Website/GG.Service.MSMQListenerService.Installer/Debug/
+Integration/Libs/GG.Integration.ThreeDSecure.dll
+/Website/GG.Web.Website/GG.Web.Website.Publish.xml
+Website/GG.Service.MSMQListenerService.Installer/Staging
+/Integration/EmailVision/GG.Integration.EmailVision.MsmqService.Installer/Debug
+/Integration/EmailVision/GG.Integration.EmailVision.MsmqService.Installer/Release
+/Website/GG.Web.Website/GG.Api.Services.Sms_deploy/.htaccess
+/Website/GG.Web.Website/GG.Api.Services.Sms_deploy/Content/JG.png
+/Website/GG.Web.Website/GG.Api.Services.Sms_deploy/Global.asax
+/Website/GG.Web.Website/GG.Api.Services.Sms_deploy/Web.config
+/Website/GG.Web.Website/GG.Api.Services.Sms_deploy/urlrewrite/default.aspx
+/Website/GG.Api.Services.Sms.Test.Unit/GG.Api.Services.Sms.Test.Unit.csproj.VisualState.xml
+/Website/GG.Api.Services.Sms.Test.Unit/TestResult.xml
+/Website/GG.Api.Services.Sms/GG.Api.Services.Sms.csproj.VisualState.xml
+/Website/GG.Api.Services.Sms/TestResult.xml
+/Website/GG.DataAccess/GG.DataAccess.csproj.VisualState.xml
+/Website/GG.DataAccess/TestResult.xml
+/Website/GG.Service.MSMQListenerService.Installer/TeamServer/GG.Service.MSMQListenerService.Installer.msi
+/Website/GG.Service.MSMQListenerService.Installer/TeamServer/setup.exe
+/Website/GG.Service.PaymentProcessing.Setup/TeamServer/GG.Service.PaymentProcessing.Setup.msi
+/Website/GG.Service.PaymentProcessing.Setup/TeamServer/setup.exe
+/Website/GG.Service.RealTimeEmailProcessing.Setup/TeamServer/GG.Service.RealTimeEmailProcessing.Setup.msi
+/Website/GG.Service.RealTimeEmailProcessing.Setup/TeamServer/setup.exe
+/Build/Output
+/Certificates/SmsApiSignRoot.cer
+/Certificates/SmsApiSignRoot.pvk
+
+# Companies
+Website/GG.Web.Website.Companies/[Cc]ontent/css/*.css
+Website/GG.Web.Website.Companies/[Cc]ontent/images/imagecache/*.*
+Website/GG.Web.Website.Companies/[Cc]ontent/images/imagecache/**
+Website/GG.Web.Website.Companies/scripts/jquery/*.js
+
+#Charity Account
+Website/GG.Web.Website.Charity/scripts/areas/charitybeta/views/*-views.min.js
+Website/GG.Web.Website.Charity/scripts/areas/charitybeta/views/*-views.js
+Website/GG.Web.Website.Charity/scripts/areas/charitybeta/views/**/*-views.min.js
+Website/GG.Web.Website.Charity/scripts/areas/charitybeta/views/**/*-views.js
+
+Website/GG.Web.Website.Charity/scripts/areas/charitybeta/jquery/plugins.js
+Website/GG.Web.Website.Charity/scripts/areas/charitybeta/jquery/plugins.min.js
+
+/QuantivProjects/BB01/Deployments/V2.0.0/20100202T173901/Configuration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100202T173901/DeploymentInfo.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100202T173901/SecurityConfiguration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100423T161959/Configuration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100423T161959/DeploymentInfo.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100423T161959/SecurityConfiguration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100423T162037/Configuration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100423T162037/DeploymentInfo.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100423T162037/SecurityConfiguration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100426T081339/Configuration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100426T081339/DeploymentInfo.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100426T081339/SecurityConfiguration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100811T104335/Configuration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100811T104335/DeploymentInfo.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100811T104335/SecurityConfiguration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100906T141818/Configuration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100906T141818/DeploymentInfo.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100906T141818/SecurityConfiguration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100929T125232/Configuration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100929T125232/DeploymentInfo.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20100929T125232/SecurityConfiguration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20101019T150239/Configuration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20101019T150239/DeploymentInfo.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20101019T150239/SecurityConfiguration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20101104T173517/Configuration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20101104T173517/DeploymentInfo.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20101104T173517/SecurityConfiguration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20110302T165302/Configuration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20110302T165302/DeploymentInfo.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20110302T165302/SecurityConfiguration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20110321T120014/Configuration.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20110321T120014/DeploymentInfo.xml
+/QuantivProjects/BB01/Deployments/V2.0.0/20110321T120014/SecurityConfiguration.xml
+
+#Performance tests output
+/Build/PerformanceTests/output
+
+*.psess
+*.vsp
+
+/Build/Output
+/Website/GG.Api.Services.Data.Sdk/build/output
+/Database/Temp/Build/Coverage/
+coverage.xml
+TestResult.xml
+coverage.xml.bkp
+Main.1.1.dotCover
+ClientBin/
+/Database/Temp/dbdeploy-output.sql
+/Database/Temp/dbdeploy-output.sql
+/Database/Temp/dbdeploy-output.sql
+/Database/Temp/dbdeploy-output.sql
+Website/**/logs/nhibernate.txt
+
+Website/GG.Api.Services.Dto/GG.Api.Services.Dto.XML
+Website/GG.Api.Services/GG.Api.Services.XML
+
+/Website/GG.Web.Website/Views/Fundraising/Atlas/Index.embed.aspx
+/Website/GG.Web.Website/Views/Fundraising/Atlas/Index.mobile.aspx
+
+/Website/GG.Api.Services/EmailVision.config
+/Website/GG.Web.Website/EmailVision.config
+Sdk
+*.msi
+setup.exe
+
+# Companies stuff
+Website/GG.Web.Website.Companies/Content/images/uploads
+
+# Payment processor settlement files
+worldpayfiles
+
+# Linked WorldPay config
+Website/GG.Web.Website/WorldPayPaymentProvider*.config
+
+ExternalLibs/NHibernateProfiler/AutoUpdate
+ExternalLibs/NHibernateProfiler/log.txt
+/Website/GG.Web.Website/logs/nhibernate.txt
+*.DotSettings
+
+# Solution reference files
+/Website/GG.Web.Website/log4net.config
+
+# nuget
+Website/packages
+packages
+
+# Ryan's autogenerated charity test scripts
+Website/GG.Web.Website.Charity.Test.Unit/scripts/areas/*
+
+# VisualStudio Test Runner results 
+# (https://github.com/github/gitignore/blob/master/VisualStudio.gitignore)
+[Tt]est[Rr]esult*

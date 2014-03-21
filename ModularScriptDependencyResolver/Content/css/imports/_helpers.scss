@@ -1,0 +1,121 @@
+// Clearing
+.clearfix:after /* clearfix... use with @extend in future */ {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+// Positioning
+.off-screen {
+  height: 1px;
+  left: -50000px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.float-r {
+  float: right;
+}
+
+.float-l {
+  float: left;
+}
+
+.float-n {
+  float: none;
+}
+
+.block {
+	display: block !important;
+}
+
+.block-link {
+	clear: both;
+	display: table;
+}
+
+.margin-none {
+	margin: 0 !important;
+}
+
+.padding-top-none {
+    padding-top: 0 !important;
+}
+
+//stick the button to the top of the page
+.mobile-sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  @include size(padding, 1.5);
+  padding-top: 5px;
+  z-index: 10;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s linear;
+}
+
+
+// Accessibility
+a {
+  &:focus, 
+  &:active {
+    background: $blue-light;
+  }
+}
+
+#accessibility {
+	list-style-type: none !important;
+	margin: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  overflow: hidden;
+  top: -1000px;
+  &:focus, &:active {
+    z-index: 10000;
+    text-decoration: none;
+    padding: 10px 1%;
+    left: 0;
+    top: 0;
+    outline: none;
+  	list-style-type: none !important; 
+  }
+}
+
+// Utility Classes
+
+// For use on anchors if contains image
+a.anchor-reset {
+	display: inline-block;
+	padding-bottom: 0;
+	border-bottom: 0;
+	img{
+		margin-bottom: 0;
+	}
+}
+
+.no-border { border: none !important;}
+.no-wrap{ white-space: nowrap;}
+.display-none { display: none;}
+.display-block { display: block;}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+
+
+
+

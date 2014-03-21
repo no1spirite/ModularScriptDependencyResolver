@@ -1,0 +1,42 @@
+﻿@import "../imports/_mixins.scss";
+@import "../imports/_variables.scss";
+@import "../imports/_cards.scss";
+
+#homepage-panel-fullwidth {
+  background-image: url("/ui/2013/images/page-backgrounds/HP-Top-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60% 60%;
+  color: $white;
+  .hp-larger-font {
+    font-size: 1.3em;
+  }
+  .hp-white-font {
+    color: $white;
+  }
+  .hp-text-shadow {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+  }
+}
+
+.hp-search-form {
+  display: inline-block;
+  vertical-align: sub;
+  width: 50%;
+  max-width: 480px;
+  min-width: 280px;
+}
+
+#homepage-search-panel {
+  background-color: $blue-light3;
+  text-align: center;
+  #hp-sp-text {
+    display: inline-block;
+    vertical-align: middle;
+    color: $white;
+    font-size: 1.03em;
+    @media (min-width: 980px) {
+      font-size: 1.13em;
+    }
+  }
+}

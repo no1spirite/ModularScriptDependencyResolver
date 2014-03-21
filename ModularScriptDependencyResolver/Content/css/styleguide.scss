@@ -1,0 +1,178 @@
+// ----- SCSS Helpers -----
+@import "imports/_mixins.scss";
+@import "imports/_variables.scss";
+
+// Navigation
+#show-nav,
+#hide-nav {
+  display: none;
+  color: #fff;
+	padding: 3px 12px;
+	font-weight:400;
+}
+#nav-start {
+	padding: 0;
+}
+#nav {
+  position: relative;
+  z-index: 1;
+  background-color: #000;
+	@include box-shadow(0px, 3px, 5px, rgba(0,0,0,0.5));
+	&:not( :target ) > #show-nav,
+	&:target > #hide-nav {
+	  display: block;
+	}
+	&:not( :target ) > #nav-start {
+		display: none;
+	}
+}
+// second level 
+.nav-top-level {
+  position: relative;
+		a, 
+		strong,
+		>span {
+			padding: 3px 12px;
+			display: block;
+			color: #fff!important;
+			border-bottom: 1px solid #fff;
+		}
+		a:hover {
+			background-color: rgb(233, 98, 0);
+		}
+	.nav-dropdown {
+		background-color: rgb(30,30,30);
+		background-image: repeating-linear-gradient(45deg, rgba(25,25,25,0.9) 0px, rgba(35,35,35,0.9) 1px, rgba(20,20,20,0.9) 10px, rgba(30,30,30,0.9) 20px);
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+	  max-height: 0;
+	  -webkit-transition: max-height 0.8s;
+	  -moz-transition: max-height 0.8s;
+	  transition: max-height 0.8s;
+	  min-width: 100%;
+	}
+	&:hover {
+		background-color: #666;
+		background-image: repeating-linear-gradient(45deg, #646464 0px, #666 1px, #606060 10px, #686868 20px);
+		.nav-dropdown {
+		  max-height: 800px;
+		}
+	}
+}
+@media (min-width: 768px) {
+	#nav-start {
+		display: block !important;
+	}
+	#nav {
+		text-align: center;
+		&:not( :target ) > #show-nav,
+		&:target > #hide-nav {
+		  display: none;
+		}
+	}
+	.nav-dropdown {
+	  text-align: left;
+	  position: absolute;
+	  top: 100%;
+	}
+}
+
+// Screen Examples
+.screen-desktop {
+    background: transparent url("/ui/2013/images/styleguide/screen-desktop.png") no-repeat center center;
+    >div {
+    	top: 10.5%;
+    	left: 4.5%;
+    	right: 4.5%;
+    	bottom: 28%;
+    }
+}
+.screen-tablet {
+    background: transparent url("/ui/2013/images/styleguide/screen-tablet.png") no-repeat center center;
+    >div {
+    	top: 9%;
+    	left: 26.7%;
+    	right: 26.7%;
+    	bottom: 8.7%;
+    }
+    .pure-gutter {padding: 0.425em;}
+}
+.screen-mobile {
+    background: transparent url("/ui/2013/images/styleguide/screen-mobile.png") no-repeat center center;
+    >div {
+    	top: 19%;
+    	left: 34%;
+    	right: 34%;
+    	bottom: 18%;
+    }
+    .pure-gutter {padding: 0.4em;}
+}
+.screen-desktop, .screen-tablet, .screen-mobile {
+    position: relative;
+    width: 100%;
+    padding-bottom: 76.45%;
+    margin-bottom: 1.7em;
+    float: left;
+    height: 0;
+    background-size: contain;
+    >div {
+    	position: absolute;
+    	overflow: hidden;
+    }
+}
+
+// grids
+.pure-g-r {font-family: arial;}
+[class *="pure-u-"] {font-family: 'roboto', arial;}
+
+[class *="pure-u-"] > .grid-unit-highlight {border-width: 1px 1px 0 0; border-style: solid; border-color: #eee; padding: 4px; text-align: center;}
+.grid-unit-highlight {background-color: #bada55; padding: 4px;}
+.pure-gutter > .grid-unit-highlight {border-bottom: 24px solid #eee;}
+
+// responsive classes
+.media-query-box {background-color: red; border-radius: 4px; padding: 10px; margin-bottom: 24px; font-weight: 400; color: #ffffff;}
+
+.phone {background-color: green;}
+
+.phone-only {background-color: green;}
+
+@media (min-width: 768px) {
+    .tablet {background-color: green;}
+    .phone-only {background-color: red;}
+    .desktop-only {background-color: red;}
+    .tablet-only {background-color: green;}
+}
+
+@media (min-width: 980px) {
+    .desktop {background-color: green;}
+    .phone-only {background-color: red;}
+    .tablet-only {background-color: red;}
+    .desktop-only {background-color: green;}
+}
+
+// colours
+.color-box {height: 50px; margin-bottom: 12px; background-color: grey; border-radius: 4px; border: 1px; box-shadow: 0px 0px 10px #aaa;}
+@media (min-width: 768px) {
+  .color-box {height: 0px; padding-bottom: 100%; margin: 1em 0 1em 0;}
+}
+
+pre {font-family: Consolas,'Bitstream Vera Sans Mono','Courier New',Courier,monospace; font-size: 14px;}
+
+//videos - allow videos to resize according to screen
+.media-wrap{
+    position: relative; //keeps the aspect ratio 
+    padding-bottom: 56.25%; // fine tunes the video positioning
+    padding-top: 60px;
+    overflow: hidden;
+	margin-bottom: 20px;
+    iframe,
+	object,
+	embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+	}
+}
