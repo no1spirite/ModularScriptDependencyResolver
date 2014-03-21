@@ -1,0 +1,109 @@
+.cards-wrap-js, .cards-wrap-nojs { 
+  position: relative;
+  .content{
+    position: static !important;
+    .card {
+      background-color: @white;
+      .size(margin-bottom, 3);
+      .card-content {
+		word-break: break-word;
+        .size(padding, 2);
+      }
+      &.border-grey {
+        border: 1px solid $grey;
+      }
+    }
+  }
+
+  // Cards by Type
+  .card.card-donation-prompt {
+	border-bottom: 2px solid #ccc;
+	  .charity-donation-prompts {
+    width: 76%;
+    margin: 0 auto;
+		.amount{
+			text-align: center;
+			h3 {
+				display: inline-block;		
+				.size(padding-top, 3.5, !important);
+				margin-bottom: 0;
+				a {
+					font-weight: 300 !important;
+					font-weight: bold;
+					text-align: center  !important;
+					color: @purple-brand;
+					.size(font-size, 6);
+				}
+			}
+
+			div {
+				display: inline;
+			}
+		}
+
+		p {
+			text-align: center  !important;
+			width: 0 auto;
+			.size(margin-top, 2, !important);
+			.size(margin-left, 4, !important);
+			.size(margin-right, 4, !important);
+			.size(padding-bottom, 0, !important);
+		}
+	}
+}
+
+  .card-CharDesc {
+    border-bottom: 2px solid #ccc;
+		.description {
+			.size(margin-bottom, 4);
+
+			p {
+				display: inline;
+			}
+		}
+    }
+
+    .card-fundraiser {
+    border: none;
+    border-bottom: 2px solid @fundraiser-resonation;
+	.block-footer {
+		  .size(padding, 1);
+		.size(padding-left, 2);
+		.size(padding-right, 2);
+    .border-radius(-10px); }
+    @media handheld {
+      border-bottom: 2px solid #237be5;
+    }
+    transition: border-bottom 0.8s;
+      .image-wrap {
+        border-bottom: 1px solid @grey-lighter;
+      }
+    /*&:hover {
+      transition: border-bottom 0.4s;
+      border-bottom: 2px solid #237be5;
+    }*/
+  }
+  .card-donor-message {
+      .size(margin-bottom, 4, !important);
+      position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      .size(border-width, 2);
+      left: 0;
+      .size(bottom, -2);
+      border-color: transparent;
+      border-style: solid;
+      border-left-color: @white;
+      z-index: -1;
+    }
+  }
+}
+
+.cards {
+	.show-more-button {
+		height: 55px;
+	}
+}

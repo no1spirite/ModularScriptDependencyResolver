@@ -1,0 +1,127 @@
+body:after {
+	content: "phone";
+	position: absolute;
+	top: 0;
+	.opacity(0);
+}
+
+//top fundraisers 
+.fundraiser 
+	h3.block-heading {
+		font-size: 16px;
+}
+
+.block-amount-raised {
+	font-size: 12px;
+}
+
+.phone-display-none{display: none;}
+
+.phone-text-right {text-align: right;}
+.phone-text-center {text-align: center;}
+.phone-text-left{text-align: left;}
+
+.phone-margin-bottom-0 {margin-bottom: 0 !important;}
+.phone-margin-bottom-1 {.size(margin-bottom, 1, !important);}
+.phone-margin-bottom-3 {.size(margin-bottom, 2, !important);}
+.phone-margin-bottom-2 {.size(margin-bottom, 3, !important);}
+.phone-margin-bottom-4 {.size(margin-bottom, 4, !important);}
+.phone-margin-bottom-5 {.size(margin-bottom, 5, !important);}
+.phone-margin-bottom-6 {.size(margin-bottom, 6, !important);}
+.phone-margin-top-0 {margin-top: 0 !important;}
+.phone-margin-top-1 {.size(margin-top, 1, !important);}
+.phone-margin-top-3 {.size(margin-top, 2, !important);}
+.phone-margin-top-2 {.size(margin-top, 3, !important);}
+.phone-margin-top-4 {.size(margin-top, 4, !important);}
+.phone-margin-top-5 {.size(margin-top, 5, !important);}
+.phone-margin-top-6 {.size(margin-top, 6, !important);}
+
+.phone-padding-bottom-0 {padding-bottom: 0 !important;}
+.phone-padding-bottom-1 {.size(padding-bottom, 1, !important);}
+.phone-padding-bottom-3 {.size(padding-bottom, 2, !important);}
+.phone-padding-bottom-2 {.size(padding-bottom, 3, !important);}
+.phone-padding-bottom-4 {.size(padding-bottom, 4, !important);}
+.phone-padding-bottom-5 {.size(padding-bottom, 5, !important);}
+.phone-padding-bottom-6 {.size(padding-bottom, 6, !important);}
+.phone-padding-top-0 {padding-top: 0 !important;}
+.phone-padding-top-1 {.size(padding-top, 1, !important);}
+.phone-padding-top-3 {.size(padding-top, 2, !important);}
+.phone-padding-top-2 {.size(padding-top, 3, !important);}
+.phone-padding-top-4 {.size(padding-top, 4, !important);}
+.phone-padding-top-5 {.size(padding-top, 5, !important);}
+.phone-padding-top-6 {.size(padding-top, 6, !important);}
+
+.footer{
+	padding-bottom: 3em;
+	.hygiene-links{
+	    ul{
+			float: none;
+	     	li{
+	        	float: none;
+	    	}
+	    }
+    }
+	ul.footer-social{
+		li{
+			float: left;
+			margin-right: 1.8em;
+		}
+	}
+}
+
+
+//homepage
+.homepage-search{
+	height: auto;
+	h1{
+		font-size: 1.6em;
+		font-weight: 400;
+	}
+	h2{
+		font-weight: 400;
+		font-size: 1.2em;
+	}
+	form{
+		button{
+		margin-top: 0!important;
+		}
+	}
+}
+
+//fix for button on phone
+@media (min-width: 320px) {
+	a.pure-button {
+		width: auto !important;
+	}
+}
+
+#main-content {
+	position: relative;
+}
+
+
+// Cards grid
+.cards-wrap-js .content {
+  &.monthly {
+		display: none;
+	}
+}
+
+.cards .loader {
+	padding: 0;
+	color: white;
+	text-align: center;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	background: url('/ui/2013/images/icons/ajax-loader-small.gif') no-repeat center !important;
+	height: 100px;
+}
+
+
+//search
+
+/*.search-group-container span.rightArrow {
+		background: url("/ui/2013/images/icons/back-mobile.png") no-repeat center left !important;
+		padding-left: 0.4em;
+	}*/

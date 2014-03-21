@@ -1,0 +1,119 @@
+html {
+  font-size: @font-size-desktop + px;
+}
+
+body:after {
+	content: "desktop";
+}
+
+.divide {
+  margin: 0 0 33px 0;
+}
+
+.divide-half {
+  margin: 0 0 16px 0;
+}
+
+.desktop-text-right {text-align: right;}
+.desktop-text-center {text-align: center;}
+.desktop-text-left {text-align: left;}
+
+.desktop-margin-bottom-0 {margin-bottom: 0 !important;}
+.desktop-margin-bottom-1 {.size(margin-bottom, 1, !important);}
+.desktop-margin-bottom-2 {.size(margin-bottom, 2, !important);}
+.desktop-margin-bottom-3 {.size(margin-bottom, 3, !important);}
+.desktop-margin-bottom-4 {.size(margin-bottom, 4, !important);}
+.desktop-margin-bottom-5 {.size(margin-bottom, 5, !important);}
+.desktop-margin-bottom-6 {.size(margin-bottom, 6, !important);}
+.desktop-margin-top-0 {margin-top: 0 !important;}
+.desktop-margin-top-1 {.size(margin-top, 1, !important);}
+.desktop-margin-top-2 {.size(margin-top, 2, !important);}
+.desktop-margin-top-3 {.size(margin-top, 3, !important);}
+.desktop-margin-top-4 {.size(margin-top, 4, !important);}
+.desktop-margin-top-5 {.size(margin-top, 5, !important);}
+.desktop-margin-top-6 {.size(margin-top, 6, !important);}
+
+.desktop-padding-bottom-0 {padding-bottom: 0 !important;}
+.desktop-padding-bottom-1 {.size(padding-bottom, 1, !important);}
+.desktop-padding-bottom-2 {.size(padding-bottom, 2, !important);}
+.desktop-padding-bottom-3 {.size(padding-bottom, 3, !important);}
+.desktop-padding-bottom-4 {.size(padding-bottom, 4, !important);}
+.desktop-padding-bottom-5 {.size(padding-bottom, 5, !important);}
+.desktop-padding-bottom-6 {.size(padding-bottom, 6, !important);}
+.desktop-padding-top-0 {padding-top: 0 !important;}
+.desktop-padding-top-1 {.size(padding-top, 1, !important);}
+.desktop-padding-top-2 {.size(padding-top, 2, !important);}
+.desktop-padding-top-3 {.size(padding-top, 3, !important);}
+.desktop-padding-top-4 {.size(padding-top, 4, !important);}
+.desktop-padding-top-5 {.size(padding-top, 5, !important);}
+.desktop-padding-top-6 {.size(padding-top, 6, !important);}
+
+#global-nav .navigation{
+  font-size: 16px;
+}
+
+//top fundraisers 
+.fundraiser 
+	h3.block-heading {
+		font-size: 20px;
+}
+
+.block-amount-raised {
+	font-size: 16px;
+}
+
+#global-nav{
+	position: static;
+	#navigation-wrap{
+	  ul{
+	    margin-right: 3em;
+	    li{
+	    	position: relative;
+	    	&.search{
+	            background-position: left center;
+	            padding-left: 2.7em;
+	            padding-right: 0.4em;
+	            span{
+	              padding-right: 1em;
+	            }
+	        }
+	    	ul{
+	    		width: 15em;
+	    	}
+
+	    }
+	  }
+	}
+} 
+
+//homepage search
+.homepage-search{
+  height: 385px;
+  h1{
+    font-weight: 600;
+    font-size: 2.7em;
+  }
+  h2{
+    font-weight: 400;
+    font-size: 1.2em;
+  }
+  form{
+    input{
+      width: 75%;
+      font-size: 1em!important;
+      padding: 0.3em 0.1em 0.4em 0.4em!important;
+    }
+  }
+}
+
+// Cards grid
+.cards-wrap-js .content {
+	.card.card-donation-prompt .charity-donation-prompts .amount div {
+		display: inline;
+	}
+}
+
+// Cards fix for ie8
+.card .card-content a.anchor-reset {
+	display: inline !important;
+}

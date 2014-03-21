@@ -1,0 +1,44 @@
+// Facebook-like button
+.fb-like {
+  z-index: 20; // less than top nav dropdown but more than mobile sticky button
+  .size(height, 2);
+}
+
+// Twitter Share Button
+#share-on-facebook, 
+#share-on-twitter, 
+#share-on-google-plus, 
+#share-on-linked-in {
+  .sprite("/ui/2013/images/icons/sprite1.png");
+  cursor: pointer;
+  .size(width, 4);
+  .size(height, 4);
+  background-position: (-(@font-size-desktop*10) + px) (-(@font-size-desktop*2) + px);
+  background-position: -10rem -2rem;
+  float: left;
+  &:hover {
+    background-position: (-(@font-size-desktop*2) + px) (-(@font-size-desktop*2) + px);
+    background-position: -2rem -2rem;
+  }
+}
+
+// Google plus Share Button
+#share-on-google-plus {
+  background-position: (-(@font-size-desktop*12) + px) (-(@font-size-desktop*2) + px);
+  background-position: -12rem -2rem;
+  &:hover {
+    background-position: (-(@font-size-desktop*4) + px) (-(@font-size-desktop*2) + px);
+    background-position: -4rem -2rem;
+  }
+}
+
+
+// Twitter Share Button
+#share-on-facebook {
+  background-position: (-(@font-size-desktop*8) + px) (-(@font-size-desktop*2) + px);
+  background-position: -8rem -2rem;
+  &:hover {
+    background-position: 0 (-(@font-size-desktop*2) + px);
+    background-position: 0rem -2rem;
+  }
+}

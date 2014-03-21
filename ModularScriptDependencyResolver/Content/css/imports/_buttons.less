@@ -1,0 +1,276 @@
+a.pure-button,
+input[type="submit"].pure-button,
+button.pure-button {
+  font-weight: 400;
+  font-family: roboto, arial;
+  border-bottom: none;
+  text-decoration: none;
+  white-space: normal;
+  vertical-align: top;
+  .size(line-height, 3);
+  .size(margin-bottom, 2);
+  .size(padding-top, 1);
+  .size(padding-right, 4);
+  .size(padding-bottom, 1);
+  .size(padding-left, 4);
+  &.pure-button-disabled {
+    &:active {
+	  box-shadow: none;
+    }
+  }
+}
+
+p .pure-button {
+  vertical-align: baseline;
+}
+
+.jg-button-magic {
+  color: @white !important;
+  background: @purple-lighter;
+  &:focus, 
+  &:active,
+  &:hover {
+    background: @purple-darker;
+  }
+  &:active {
+	.box-shadow(0 0 0 1px rgba(0,0,0,.3) inset,0 0 17px rgba(0,0,0,.6) inset);
+  }
+  &.pure-button-disabled {
+	&:focus, 
+    &:active,
+    &:hover {
+      background: @purple-lighter;
+    }
+  }
+}
+.jg-button-primary {
+  color: @white !important;
+  background: @orange;
+  &:focus, 
+  &:active,
+  &:hover {
+    background: @orange-darker;
+  }
+  &:active {
+	.box-shadow(0 0 0 1px rgba(0,0,0,.3) inset,0 0 17px rgba(0,0,0,.6) inset);
+  }
+  &.pure-button-disabled {
+	&:focus, 
+    &:active,
+    &:hover {
+      background: @orange;
+    }
+  }
+}
+.jg-button-secondary {
+  color: @white !important;
+  background-color: @blumine; 
+  &:focus, 
+  &:active,
+  &:hover {
+    background-color: @blumine-darker;
+  }
+  &:active {
+	.box-shadow(0 0 0 1px rgba(0,0,0,.3) inset,0 0 17px rgba(0,0,0,.6) inset);
+  }
+ &.pure-button-disabled {
+	&:focus, 
+    &:active,
+    &:hover {
+      background: @blumine; 
+      cursor: not-allowed;
+    }
+  }
+}
+.jg-button-tertiary {
+  color: @body-copy !important;
+  background: @grey-button-normal;
+  &:focus, 
+  &:active,
+  &:hover {
+    background: @grey-button-hover;
+  }
+  &:active {
+	.box-shadow(0 0 0 1px rgba(0,0,0,.3) inset,0 0 17px rgba(0,0,0,.6) inset);
+  }
+  &.pure-button-disabled {
+	color: #a9a7a4 !important;
+	.opacity(1);
+  	&:focus, 
+    &:active,
+    &:hover {
+      background: #E9E9E9;
+      cursor: not-allowed;
+    }
+  }
+}
+.pure-button-disabled {
+  &:focus, 
+  &:active {
+    background: @grey-background;
+  }
+}
+
+
+//tertiary on grey background  (reverersed)
+.jg-button-tertiary-reverse {
+  color: @body-copy !important;
+  background: #fff;
+  border: 1px solid @grey !important;
+  text-decoration: none;
+  &:focus, 
+  &:active,
+  &:hover {
+    background: @grey-button-reversed;
+	text-decoration: none;
+  }
+  &:active {
+	.box-shadow(0 0 0 1px rgba(0,0,0,.3) inset,0 0 17px rgba(0,0,0,.6) inset);
+  }
+  &.pure-button-disabled {
+	color: @grey-background !important;
+	.opacity(1);
+  	&:focus, 
+    &:active,
+    &:hover {
+      background: @grey-button-disabled;
+	  text-decoration: none;
+    }
+  }
+}
+
+//used on search results page
+.jg-button-tertiary-grey-border {
+  color: @body-copy !important;
+  background: @grey-tertiary;
+  border: 1px solid #d2d2d2 !important;
+  &:focus, 
+  &:active,
+  &:hover {
+    background: @grey-button-hover;
+  }
+  &:active {
+	.box-shadow(0 0 0 1px rgba(0,0,0,.3) inset,0 0 17px rgba(0,0,0,.6) inset);
+  }
+  &.pure-button-disabled {
+	color: #a9a7a4 !important;
+	.opacity(1);
+  	&:focus, 
+    &:active,
+    &:hover {
+      background: @grey-button-disabled;
+    }
+  }
+}
+.pure-button-disabled {
+  &:focus, 
+  &:active {
+    background: @grey-background;
+  }
+}
+
+
+
+.jg-button-facebook{
+        cursor: pointer;
+        display: inline-block;
+        width: 202px;
+        height: 46px;
+        background-image: url('/ui/2013/images/buttons/active_404.png');
+        background-repeat: no-repeat;
+        background-image: -webkit-image-set(
+                                  url(/ui/2013/images/buttons/active_404.png) 1x,
+                                  url(/ui/2013/images/buttons/active_404@2x.png) 2x
+                                );
+        
+        
+        &:focus,&:active,&:hover{
+        border: none;
+        background-image: url('/ui/2013/images/buttons/pressed_404.png');
+        background-color: transparent;
+        }
+        &:focus,&:active,&:hover{
+                position: relative;
+                top: 2px;
+                background-image: -webkit-image-set(
+                                  url(/ui/2013/images/buttons/pressed_404.png) 1x,
+                                  url(/ui/2013/images/buttons/pressed_404@2x.png) 2x
+                                );
+        }
+}
+.jg-header-text-link {
+  color: @body-copy !important;
+  text-decoration: none !important;
+  border: none !important;
+  font-weight: 500 !important;
+  padding: 0 5px !important;
+  &:hover {
+	text-decoration: underline !important;
+  }
+  &:focus, 
+  &:active {
+    background: @grey-light;
+	text-decoration: none !important;
+  }
+}
+.jg-action-text-link {
+  color: @blue !important;
+  text-decoration: underline !important;
+  border: none !important;
+  font-weight: 400 !important;
+  padding: 0 5px !important;
+  &:hover {
+	color: @body-copy !important;
+  }
+  &:focus, 
+  &:active {
+    background: @grey-light;
+	text-decoration: none !important;
+  }
+}
+.jg-content-text-link {
+  color: @body-copy !important;
+  text-decoration: underline !important;
+  border: none !important;
+  font-weight: 400 !important;
+  padding: 0 5px !important;
+  &:hover {
+	text-decoration: none !important;
+  }
+  &:focus, 
+  &:active {
+    background: @grey-light;
+	text-decoration: none !important;
+  }
+}
+.facebook-liking-button {
+	background: url(~/)
+}
+.button-small {
+  padding: {
+    top: 0 !important;
+    bottom: 0 !important;
+  }
+}
+
+a.full-width {
+  display: block;
+}
+
+
+.icon{
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.magnifier{
+	background-image: url('/ui/2013/images/icons/icon-magnifier.png') !important;
+}
+
+
+@media (max-width: 767px) {
+	a.pure-button,input[type="submit"].pure-button,button.pure-button{
+		width: 100%;
+		.size(padding-top, 1.8);
+		.size(padding-bottom, 1.8);
+		}
+	}
